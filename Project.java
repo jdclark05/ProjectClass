@@ -15,6 +15,7 @@ class Project {
         this.name = "name";
         this.initialCost = 0.0;
         this.description = "description";
+        port.addToList(name, initialCost, description);
     }
 
 
@@ -29,6 +30,7 @@ class Project {
         this.name = name;
         this.initialCost = 0.0;
         this.description = "description";
+        port.addToList(name, initialCost, description);
     }
 
 
@@ -43,6 +45,7 @@ class Project {
         this.name = name;
         this.initialCost = 0.0;
         this.description = description;
+        port.addToList(name, initialCost, description);
     }
 
     //Getter by cost attribute
@@ -55,6 +58,7 @@ class Project {
         this.name = name;
         this.initialCost = initialCost;
         this.description = description;
+        port.addToList(name, initialCost, description);
     }
 }
 
