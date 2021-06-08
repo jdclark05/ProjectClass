@@ -5,52 +5,37 @@ class Project {
 
     Portfolio port = new Portfolio();
 
-    //Getter by no given Attributes
-    public String getAllProjects(){
-        return name + " (" + initialCost + ") : " + description + "\n";
-    }
 
     //Setter no given attributes
     public Project(){
-        this.name = "name";
-        this.initialCost = 0.0;
-        this.description = "description";
-        port.addToList(name, initialCost, description);
     }
-
-
 
     //Getter by Name Attribute only
-    public String elevatorPitch(String name){
-        return name + " (" + initialCost + ") : " + description + "\n";
+    public String elevatorPitch(){
+        return this.name + " (" + this.initialCost + ") : " + this.description + "\n";
     }
 
-    //Setter with only name attribute
+    //Setter -Name Only-
     public Project(String name){
         this.name = name;
-        this.initialCost = 0.0;
-        this.description = "description";
         port.addToList(name, initialCost, description);
     }
 
-
-
-    //Getter by 2 attributes
-    public String getByNameAndDesc(String name, String description){
-        return name + " (" + initialCost + ") : " + description + "\n";
+    //Getter -Name Only-
+    public String getJustName(){
+        return this.name;
     }
 
-    //Setter with both 2 attributes
+    //Setter -Name And Description-
     public Project(String name, String description){
         this.name = name;
-        this.initialCost = 0.0;
         this.description = description;
         port.addToList(name, initialCost, description);
     }
 
-    //Getter by cost attribute
-    public String getByCost(double initialCost){
-        return name + " (" + initialCost + ") : " + description + "\n";
+    //Getter -Cost Only-
+    public double getJustCost(){
+        return this.initialCost;
     }
 
     //Setter with all attributes
@@ -59,6 +44,11 @@ class Project {
         this.initialCost = initialCost;
         this.description = description;
         port.addToList(name, initialCost, description);
+    }
+
+    //Getter -Description Only-
+    public String getJustDesc(){
+        return this.description;
     }
 }
 
